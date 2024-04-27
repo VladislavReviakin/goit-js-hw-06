@@ -1,6 +1,10 @@
 class Storage {
   #items
 
+  constructor(items) {
+    this.#items = items;
+  }
+
   getItems() {
     return this.#items
   }
@@ -11,7 +15,7 @@ class Storage {
 
   removeItem(itemToRemove) {
     return this.#items.filter(item => item !== itemToRemove)
-  }
+  }//поясніть будьласка, як зробити так щоб ця властивість саме видаляла предмет, а не повертала новий масив.
 }
 
 const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
